@@ -39,6 +39,8 @@ typedef struct _ALLEGRO_MAP_OBJECT         ALLEGRO_MAP_OBJECT;
 ALLEGRO_MAP *al_open_map(const char *dir, const char *filename);
 
 // drawing methods
+char *al_path_to_root(const char *path);
+ALLEGRO_MAP *al_open_map_from(const char *root_dir, const char *dir, const char *filename);
 void al_draw_tinted_map(ALLEGRO_MAP *map, ALLEGRO_COLOR tint, float dx, float dy, int flags);
 void al_draw_map(ALLEGRO_MAP *map, float dx, float dy, int flags);
 void al_draw_tinted_map_region(ALLEGRO_MAP *map, ALLEGRO_COLOR tint, float sx, float sy, float sw, float sh, float dx, float dy, int flags);
