@@ -237,8 +237,11 @@ char *al_path_to_root(const char *path)
             sep_count++;
             if (sep_count > 1)
             {
-                sep_count++;
                 strcat(new_path, "../");
+            }
+            else
+            {
+                sep_cout++;
             }
         }
     }
